@@ -1,0 +1,8 @@
+{
+  "name": "potencial-lar-site",
+  "version": "1.0.0",
+  "description": "Site do Depósito de Materiais de Construção Potencial Lar e Construção",
+  "scripts": {
+    "dev": "npx serve ."
+  }
+}
