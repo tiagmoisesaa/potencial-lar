@@ -43,6 +43,9 @@
     hamburger.addEventListener('click', function () {
       this.classList.toggle('active');
       navMenu.classList.toggle('active');
+      if (header) {
+        header.classList.toggle('menu-active');
+      }
       document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
 
       const isExpanded = this.getAttribute('aria-expanded') === 'true';
@@ -55,6 +58,9 @@
       link.addEventListener('click', function () {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        if (header) {
+          header.classList.remove('menu-active');
+        }
         document.body.style.overflow = '';
         hamburger.setAttribute('aria-expanded', 'false');
       });
@@ -224,6 +230,9 @@
       if (navMenu && navMenu.classList.contains('active')) {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        if (header) {
+          header.classList.remove('menu-active');
+        }
         document.body.style.overflow = '';
         hamburger.setAttribute('aria-expanded', 'false');
         hamburger.focus();
