@@ -1575,9 +1575,10 @@ h1, h2, h3, h4, h5, h6 {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Align from the top to prevent logo overlap */
     align-items: center; /* Horizontally center links */
     text-align: center;
+    padding-top: calc(var(--header-height) + var(--space-2xl)); /* Position below the header logo */
     gap: var(--space-xl); /* Slightly smaller gap to make room for all links */
     transform: translateX(100%);
     transition: transform var(--transition-slow);
